@@ -1,8 +1,7 @@
 import Star from './Star.png'
-
-export default function BelowImage() {
+export default function BelowImage(props) {
   return <div className="BelowImage">
-    <img src={Star} alt="Rating" /> <p className="rating"> 5.0 <span className="Grey">(6) USA</span> </p>
-    <p className="description">Life lessons with Katie Zaferes</p> <p className="price"><b>From $136</b>/person</p>
+    <img src={Star} alt="Rating" /> <p className="rating"> {props.review} <span className="Grey">(6) USA</span> </p>
+    <p className="description">{props.description}</p> <p className="price"><b>From ${props.price}</b>/person</p>
   </div>
 }
